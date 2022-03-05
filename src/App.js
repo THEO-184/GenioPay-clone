@@ -1,11 +1,11 @@
+import HeaderNav from "./components/HeaderNav/HeaderNav";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
 	return (
 		<div className="App">
-			<div>
-				<Navbar />
-			</div>
+			<Navbar />
+			<HeaderNav />
 		</div>
 	);
 }
