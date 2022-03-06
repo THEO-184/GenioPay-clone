@@ -5,37 +5,42 @@ export const Container = styled.main`
 	left: 23.5vw;
 	top: 93px;
 	background: #fcfdfe;
+`;
 
-	.header {
-		width: 100%;
+export const Header = styled.div`
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-style: normal;
+	font-weight: bold;
+
+	.create-wallet {
+		width: 207px;
+	}
+
+	& > div {
 		display: flex;
+		justify-content: center;
 		align-items: center;
-		justify-content: space-between;
-		font-style: normal;
-		font-weight: bold;
-
-		& > div {
-			display: flex;
-			justify-content: center;
-			h5 {
-				margin-right: 1rem;
-			}
-		}
-
-		h6 {
-			font-size: 16px;
-			line-height: 150%;
-			color: #017189;
-		}
-
 		h5 {
-			font-size: 21px;
-			line-height: 150%;
+			margin-right: 1rem;
 		}
+	}
+
+	h6 {
+		font-size: 16px;
+		line-height: 150%;
+		color: #017189;
+	}
+
+	& > h5 {
+		font-size: 21px;
+		line-height: 150%;
 	}
 `;
 
-export const DashboardContainer = styled.section`
+export const ContentContainer = styled.section`
 	background: #fff;
 	width: 90%;
 	margin: 1rem auto;

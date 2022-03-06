@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderNavContainer = styled.div`
 	position: absolute;
-	width: 75vw;
+	width: 69.99vw;
 	height: 93px;
 	left: 23.5vw;
 	top: 0px;
@@ -23,7 +23,7 @@ export const HeaderNavContainer = styled.div`
 	}
 	h3 {
 		color: #001b21;
-		margin-right: 30px;
+		margin-right: auto;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 28px;

@@ -2,7 +2,7 @@ import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import { FiSearch } from "react-icons/fi";
 
-const Search = styled("div")(({ theme }) => ({
+const Search = styled("div")((props) => ({
 	position: "relative",
 	borderRadius: "16px",
 	border: "1px solid #AAC0C5",
@@ -11,11 +11,11 @@ const Search = styled("div")(({ theme }) => ({
 		backgroundColor: "#F8FCFC",
 	},
 	marginLeft: 0,
-	width: "304px",
-	[theme.breakpoints.up("sm")]: {
-		marginLeft: theme.spacing(1),
-		width: "304px",
-	},
+	width: `${props.size}px`,
+	// [theme.breakpoints.up("sm")]: {
+	// 	marginLeft: theme.spacing(1),
+	// 	width: `${props.size}px`,
+	// },
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
@@ -45,10 +45,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 	},
 }));
 
-const SearchBar = () => {
+const SearchBar = ({ size }) => {
 	return (
 		<div>
-			<Search>
+			<Search size={size}>
 				<SearchIconWrapper>
 					<FiSearch />
 				</SearchIconWrapper>

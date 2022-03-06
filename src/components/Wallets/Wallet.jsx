@@ -12,7 +12,7 @@ const Item = MatStyled(Paper)(({ theme }) => ({
 const Wallet = ({ walletInfo }) => {
 	const { account_name, currency, price, backCol } = walletInfo;
 	return (
-		<Grid item md={4} xs={1} sx={{ height: "140px", p: 1.5 }}>
+		<Grid item md={4} xs={12} sx={{ height: "140px", p: 1.5 }}>
 			<Item elevation={0} sx={{ height: "140px", p: 1.5, background: backCol }}>
 				<Box
 					sx={{

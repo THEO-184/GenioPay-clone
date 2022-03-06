@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { AiOutlineEye } from "react-icons/ai";
+import { AppContext } from "../../App";
 import {
 	NavContainer,
 	Img,
 	Details,
-	Dashboard,
 	NavMenu,
 	NavLink,
 	Vector,
@@ -12,15 +12,18 @@ import {
 	ButtonContainer,
 	Button,
 	Refer,
+	LightGreenBtn,
 } from "./NavComponents/components";
 import getNavContent from "../../headerData";
 
 const Navbar = () => {
+	const { setTitle } = useContext(AppContext);
 	const navData = getNavContent();
 	const [navId, setNavId] = useState(1);
 
-	const handleChangeNavLink = (id) => {
+	const handleChangeNavLink = (id, word) => {
 		setNavId(id);
+		setTitle(word);
 	};
 
 	return (
@@ -69,7 +72,7 @@ const Navbar = () => {
 					return (
 						<NavLink
 							key={nav.id}
-							onClick={() => handleChangeNavLink(nav.id)}
+							onClick={() => handleChangeNavLink(nav.id, nav.word)}
 							backCol={nav.id === navId ?? "#fff"}
 							textCol={nav.id === navId ?? "#017189"}
 						>
@@ -87,7 +90,7 @@ const Navbar = () => {
 						<p>Use the below link to invite customers</p>
 					</div>
 				</div>
-				<button>Invite Friends</button>
+				<LightGreenBtn>Invite Friends</LightGreenBtn>
 			</Refer>
 		</NavContainer>
 	);
