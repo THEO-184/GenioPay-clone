@@ -100,6 +100,27 @@ const quickWalletLinks = [
 	},
 ];
 
+const transactionHistory = [
+	{
+		id: 1,
+		path: "/images/transactionsWallet.png",
+		word: "Total Transactions",
+		price: "$88,600.00",
+	},
+	{
+		id: 2,
+		path: "/images/payin.png",
+		word: "Pay-In",
+		price: "$4600.00",
+	},
+	{
+		id: 1,
+		path: "/images/pay-out.png",
+		word: "Pay-Out",
+		price: "$72,600.00",
+	},
+];
+
 const getNavContent = () => {
 	return contentObj;
 };
@@ -110,6 +131,10 @@ export const getWalletDetails = () => {
 
 export const getQuickWallets = () => {
 	return quickWalletLinks;
+};
+
+export const getTransactionHistory = () => {
+	return transactionHistory;
 };
 
 export default getNavContent;

@@ -1,12 +1,24 @@
 import React from "react";
-import styled from "styled-components";
 import { Box, Grid, Paper } from "@mui/material";
+import {
+	DashboardContainer,
+	Container,
+	BoxIcon,
+	WalletContent,
+	TransactionsContainer,
+} from "./components/components";
+import { BiChevronDown } from "react-icons/bi";
 import Wallet from "../../components/Wallets/Wallet";
-import { getWalletDetails, getQuickWallets } from "../../headerData";
+import {
+	getWalletDetails,
+	getQuickWallets,
+	getTransactionHistory,
+} from "../../headerData";
 
 const Dashboard = () => {
 	const walletDetails = getWalletDetails();
 	const quickLinks = getQuickWallets();
+	const transactionHistory = getTransactionHistory();
 
 	return (
 		<Container>
@@ -59,83 +71,34 @@ const Dashboard = () => {
 						);
 					})}
 				</Box>
+				<div className="header">
+					<div>
+						<h5>Activity</h5>
+						<h6>
+							Month
+							<BiChevronDown />
+						</h6>
+					</div>
+					<h6>View Transaction History</h6>
+				</div>
+				<TransactionsContainer>
+					{transactionHistory.map((item) => {
+						return (
+							<div key={item.id} className="transaction">
+								<div className="img-container">
+									<img src={item.path} alt="image" />
+								</div>
+								<div>
+									<p>{item.word}</p>
+									<h6>{item.price}</h6>
+								</div>
+							</div>
+						);
+					})}
+				</TransactionsContainer>
 			</DashboardContainer>
 		</Container>
 	);
 };
 
-const Container = styled.main`
-	position: absolute;
-	width: 73vw;
-	left: 23.5vw;
-	top: 93px;
-	background: #fcfdfe;
-
-	.header {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		font-style: normal;
-		font-weight: bold;
-
-		h6 {
-			font-size: 16px;
-			line-height: 150%;
-			color: #017189;
-		}
-
-		h5 {
-			font-size: 21px;
-			line-height: 150%;
-		}
-	}
-`;
-
-const DashboardContainer = styled.section`
-	background: #fff;
-	width: 90%;
-	margin: 1rem auto;
-	height: 1065px;
-	border-radius: 16px;
-	padding: 0 1.2rem;
-	padding-right: 2rem;
-	font-style: normal;
-
-	.quick-links {
-		margin-top: 5rem;
-		margin-bottom: 2rem;
-
-		h5 {
-			font-weight: bold;
-			font-size: 21px;
-			color: #001b21;
-			margin: 0;
-		}
-
-		p {
-			font-size: 16px;
-			color: #94a3b8;
-		}
-	}
-`;
-
-const BoxIcon = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	margin-top: 0.5rem;
-	width: 25px;
-	height: 25px;
-	border-radius: 200px;
-	background: ${(props) => props.backCol};
-`;
-
-const WalletContent = styled.h5`
-	width: 81px;
-	height: 42px;
-	font-size: 14px;
-	text-align: center;
-`;
 export default Dashboard;
