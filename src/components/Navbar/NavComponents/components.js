@@ -212,10 +212,9 @@ export const LightGreenBtn = styled.button`
 	height: 56px;
 	background: #017189;
 	border-radius: 8px;
-	border: 0px;
+	border: none;
 	outline: none;
 	margin: 0.5rem 0;
-	/* font-family: Nunito Sans; */
 	cursor: pointer;
 	font-style: normal;
 	font-weight: bold;

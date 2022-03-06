@@ -6,7 +6,8 @@ import {
 	Header,
 } from "../Dashboard/components/components";
 import { LightGreenBtn } from "../../components/Navbar/NavComponents/components";
-import LeftGrid from "./LeftGrid";
+import LeftGrid from "./LeftGrid/LeftGrid";
+import RightGrid from "./RightGrid";
 
 const Wallet = () => {
 	return (
@@ -27,9 +28,7 @@ const Wallet = () => {
 				</Header>
 				<Grid container spacing={2}>
 					<LeftGrid />
-					<Grid item xs={12} md={8}>
-						<Paper sx={{ p: 1, maxWidth: "100%" }}>2</Paper>
-					</Grid>
+					<RightGrid />
 				</Grid>
 			</ContentContainer>
 		</Container>

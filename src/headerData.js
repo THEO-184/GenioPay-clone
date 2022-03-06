@@ -135,6 +135,56 @@ const tabContents = [
 		word: "Closed (0)",
 	},
 ];
+const WalletTabContents = [
+	{
+		id: 1,
+		word: "Active",
+	},
+	{
+		id: 2,
+		word: "Transactions",
+	},
+	{
+		id: 3,
+		word: "Invoices",
+	},
+];
+
+const expensesDetails = [
+	{
+		id: 1,
+		word: "Ledger Balance",
+		total: 2000000.5,
+	},
+	{
+		id: 2,
+		word: "Total Income",
+		total: 2000000.5,
+	},
+	{
+		id: 3,
+		word: "Blocked Balance",
+		total: 0.0,
+	},
+	{
+		id: 4,
+		word: "Total Outgoing",
+		total: 5000000.5,
+	},
+];
+
+const payMentOptions = [
+	{
+		id: 1,
+		word: "Payment",
+		path: "/images/payment.png",
+	},
+	{
+		id: 2,
+		word: "Pay In",
+		path: "/images/payin.png",
+	},
+];
 
 const getNavContent = () => {
 	return contentObj;
@@ -154,6 +204,17 @@ export const getTransactionHistory = () => {
 
 export const getTabContents = () => {
 	return tabContents;
+};
+export const getWalletTabContents = () => {
+	return WalletTabContents;
+};
+
+export const getExpensesDetails = () => {
+	return expensesDetails;
+};
+
+export const getPaymentOptions = () => {
+	return payMentOptions;
 };
 
 export default getNavContent;

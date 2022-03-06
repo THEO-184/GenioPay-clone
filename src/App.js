@@ -12,7 +12,13 @@ function App() {
 		<AppContext.Provider className="App" value={{ setTitle, title }}>
 			<Navbar />
 			<HeaderNav />
-			{title === "Dashboard" ? <Dashboard /> : <Wallet />}
+			{title === "Dashboard" ? (
+				<Dashboard />
+			) : title === "Wallet" ? (
+				<Wallet />
+			) : (
+				<h1>{title}</h1>
+			)}
 		</AppContext.Provider>
 	);
 }
