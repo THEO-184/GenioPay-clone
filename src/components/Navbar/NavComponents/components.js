@@ -9,7 +9,7 @@ export const NavContainer = styled.div`
 	width: 20vw;
 	left: -1px;
 	top: 0px;
-
+	height: 2727px;
 	background: #017189;
 `;
 
@@ -137,7 +137,7 @@ export const WalletContainer = styled.div`
 	}
 
 	& > div:last-child {
-		background: #ffffff;
+		background: transparent;
 		transform: rotate(-180deg);
 		width: 16px;
 		height: 16px;

@@ -6,7 +6,7 @@ import SearchBar from "./Searchbar";
 const HeaderNav = () => {
 	return (
 		<HeaderNavContainer>
-			<h1>Welcome, Huss Smith</h1>
+			<h3>Welcome, Huss Smith</h3>
 			<div className="flex-container">
 				<SearchBar />
 				<img src="/images/tree.png" alt="tree" />
@@ -40,22 +40,19 @@ const HeaderNavContainer = styled.div`
 		display: flex;
 		align-items: center;
 
-		img {
-			display: inline-block;
-			margin: 0 0.5rem;
+		img,
+		span {
+			display: block;
+			margin: 0.5rem;
 		}
 	}
-	h1 {
+	h3 {
 		color: #001b21;
-		margin-right: 80px;
+		margin-right: 30px;
 		font-style: normal;
 		font-weight: bold;
 		font-size: 28px;
 		line-height: 100%;
-		/* identical to box height, or 28px */
-
-		/* Text/title */
-
 		color: #001b21;
 	}
 `;
@@ -65,6 +62,10 @@ const UserProfile = styled.div`
 	align-items: center;
 	justify-content: center;
 	font-style: normal;
+	width: 178px;
+	border-radius: 16px;
+	height: 56px;
+	background: #fff;
 
 	.verified {
 		padding-right: 5px;

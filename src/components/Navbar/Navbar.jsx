@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineEye } from "react-icons/ai";
 import {
 	NavContainer,
 	Img,
@@ -36,7 +37,9 @@ const Navbar = () => {
 							<h6>$1500.00</h6>
 						</div>
 					</div>
-					<div>1</div>
+					<div>
+						<AiOutlineEye color="#fff" />
+					</div>
 				</WalletContainer>
 				<hr />
 				<WalletContainer>
@@ -49,7 +52,9 @@ const Navbar = () => {
 							<h6>35</h6>
 						</div>
 					</div>
-					<div>1</div>
+					<div>
+						<AiOutlineEye color="#fff" />
+					</div>
 				</WalletContainer>
 				<hr />
 				<ButtonContainer>

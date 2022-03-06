@@ -1,6 +1,7 @@
 body {
 	overflow-x: hidden;
 	font-family: "Nunito Sans", sans-serif;
+	background: #fcfdfe;
 }
 
 * {
