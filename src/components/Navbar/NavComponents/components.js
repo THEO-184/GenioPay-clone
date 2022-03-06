@@ -200,33 +200,38 @@ export const Refer = styled.div`
 			margin: 0;
 		}
 	}
+`;
 
-	button {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 16px;
-		width: 100%;
-		height: 56px;
-		background: #017189;
-		border-radius: 8px;
-		border: 0px;
+export const LightGreenBtn = styled.button`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 16px;
+	width: 100%;
+	height: 56px;
+	background: #017189;
+	border-radius: 8px;
+	border: 0px;
+	outline: none;
+	margin: 0.5rem 0;
+	/* font-family: Nunito Sans; */
+	cursor: pointer;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 150%;
+
+	/* button/text */
+
+	color: #ffffff;
+
+	&:focus {
 		outline: none;
-		margin: 0.5rem 0;
-		/* font-family: Nunito Sans; */
-		cursor: pointer;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 150%;
+	}
 
-		/* button/text */
-
-		color: #ffffff;
-
-		&:focus {
-			outline: none;
-		}
+	&:hover {
+		background: #017189;
+		opacity: 0.95;
 	}
 `;

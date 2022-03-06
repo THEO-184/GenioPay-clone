@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HeaderNavContainer, UserProfile } from "./components/components";
 import { BiChevronDown } from "react-icons/bi";
+import { AppContext } from "../../App";
 
 import SearchBar from "./Searchbar";
 
 const HeaderNav = () => {
+	const { title, setTitle } = useContext(AppContext);
 	return (
 		<HeaderNavContainer>
-			<h3>Welcome, Huss Smith</h3>
+			<h3>{title}</h3>
 			<div className="flex-container">
-				<SearchBar />
+				<SearchBar size={304} />
 				<img src="/images/tree.png" alt="tree" />
 				<span>0 planted</span>
 				<img src="/images/notification.png" alt="notification" />

@@ -1,14 +1,19 @@
+import { createContext, useState } from "react";
 import HeaderNav from "./components/HeaderNav/HeaderNav";
 import Navbar from "./components/Navbar/Navbar";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Wallet from "./pages/Wallet/Wallet";
 
+export const AppContext = createContext(null);
 function App() {
+	const [title, setTitle] = useState("Dashboard");
+
 	return (
-		<div className="App">
+		<AppContext.Provider className="App" value={{ setTitle, title }}>
 			<Navbar />
 			<HeaderNav />
-			<Dashboard />
-		</div>
+			{title === "Dashboard" ? <Dashboard /> : <Wallet />}
+		</AppContext.Provider>
 	);
 }
 

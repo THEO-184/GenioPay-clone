@@ -114,10 +114,25 @@ const transactionHistory = [
 		price: "$4600.00",
 	},
 	{
-		id: 1,
+		id: 3,
 		path: "/images/pay-out.png",
 		word: "Pay-Out",
 		price: "$72,600.00",
+	},
+];
+
+const tabContents = [
+	{
+		id: 1,
+		word: "Active (3)",
+	},
+	{
+		id: 2,
+		word: "Inactive (2)",
+	},
+	{
+		id: 3,
+		word: "Closed (0)",
 	},
 ];
 
@@ -135,6 +150,10 @@ export const getQuickWallets = () => {
 
 export const getTransactionHistory = () => {
 	return transactionHistory;
+};
+
+export const getTabContents = () => {
+	return tabContents;
 };
 
 export default getNavContent;

@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Grid, Paper } from "@mui/material";
 import {
-	DashboardContainer,
+	ContentContainer,
 	Container,
 	BoxIcon,
 	WalletContent,
 	TransactionsContainer,
+	Header,
 } from "./components/components";
 import { BiChevronDown } from "react-icons/bi";
 import Wallet from "../../components/Wallets/Wallet";
@@ -22,11 +23,11 @@ const Dashboard = () => {
 
 	return (
 		<Container>
-			<DashboardContainer>
-				<div className="header">
+			<ContentContainer>
+				<Header>
 					<h5>Wallet (5)</h5>
 					<h6>View all wallets</h6>
-				</div>
+				</Header>
 				<Box>
 					<Grid container spacing={2}>
 						{walletDetails.map((wallet) => {
@@ -71,7 +72,7 @@ const Dashboard = () => {
 						);
 					})}
 				</Box>
-				<div className="header">
+				<Header>
 					<div>
 						<h5>Activity</h5>
 						<h6>
@@ -80,7 +81,7 @@ const Dashboard = () => {
 						</h6>
 					</div>
 					<h6>View Transaction History</h6>
-				</div>
+				</Header>
 				<TransactionsContainer>
 					{transactionHistory.map((item) => {
 						return (
@@ -96,7 +97,7 @@ const Dashboard = () => {
 						);
 					})}
 				</TransactionsContainer>
-			</DashboardContainer>
+			</ContentContainer>
 		</Container>
 	);
 };
