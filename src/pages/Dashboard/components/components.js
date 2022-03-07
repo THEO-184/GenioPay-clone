@@ -6,6 +6,7 @@ export const Container = styled.main`
 	width: 70%;
 	left: 25%;
 	top: 93px;
+	overflow-x: hidden;
 	/* background: #fcfdfe; */
 
 	@media ${device.tablet} {
@@ -111,6 +112,7 @@ export const TransactionsContainer = styled.div`
 	margin-bottom: 1rem;
 	display: flex;
 	justify-content: flex-end;
+	flex-wrap: wrap;
 	max-width: 100%;
 	align-items: center;
 
@@ -118,7 +120,9 @@ export const TransactionsContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 		margin-left: 3rem;
+		flex-basis: 33%;
 
 		.img-container {
 			display: flex;
@@ -154,13 +158,16 @@ export const TransactionsContainer = styled.div`
 	}
 
 	@media ${device.tablet} {
-		justify-content: space-evenly;
+		justify-content: flex-start;
 
 		.transaction {
 			margin-left: 0rem;
+			flex-basis: 50%;
+			justify-content: flex-start;
 
 			.img-container {
 				padding-left: 0;
+				background: transparent;
 			}
 		}
 
