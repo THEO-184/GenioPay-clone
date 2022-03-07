@@ -108,6 +108,7 @@ export const WalletContent = styled.h5`
 
 export const TransactionsContainer = styled.div`
 	margin: 0;
+	margin-bottom: 1rem;
 	display: flex;
 	justify-content: flex-end;
 	max-width: 100%;
