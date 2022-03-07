@@ -13,13 +13,17 @@ export const NavContainer = styled.div`
 	height: 2727px;
 	background: #017189;
 
+	&.close {
+		display: none;
+	}
+
 	@media ${device.tablet} {
 		width: 50vw;
 		z-index: 10;
 		justify-content: flex-start;
 		align-items: flex-start;
 		left: 0;
-		display: none;
+		/* display: none; */
 	}
 
 	@media ${device.mobileL} {
@@ -34,7 +38,17 @@ export const CloseIcon = styled.div`
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	display: none;
+	opacity: 0;
+
+	@media ${device.tablet} {
+		opacity: 1;
+	}
+
+	@media ${device.mobileL} {
+		position: absolute;
+		top: 20px;
+		right: 100px;
+	}
 `;
 
 export const Img = styled.img`

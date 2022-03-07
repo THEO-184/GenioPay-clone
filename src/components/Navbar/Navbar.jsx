@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react";
-import { AiOutlineEye, AiOutlineClose } from "react-icons/ai";
+import React, { useState, useContext, useEffect } from "react";
+import { AiOutlineEye, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { AppContext } from "../../App";
-import { GrClose } from "react-icons/gr";
+import useWindowDimensions from "../useWindowDimension";
 import {
 	NavContainer,
 	Img,
@@ -19,31 +19,23 @@ import {
 import getNavContent from "../../headerData";
 
 const Navbar = () => {
-	const { setTitle } = useContext(AppContext);
+	const { width } = useWindowDimensions();
+	const { setTitle, setClose } = useContext(AppContext);
 	const navData = getNavContent();
 	const [navId, setNavId] = useState(1);
-	const [close, setClose] = useState("");
-
-	const handleExit = () => {
-		setClose("close");
-	};
+	const [widthVal, setWidthVal] = useState(width);
+	console.log(width);
 
 	const handleChangeNavLink = (id, word) => {
 		setNavId(id);
 		setTitle(word);
+		if (widthVal < 922) {
+			setClose(false);
+		}
 	};
 
 	return (
-		<NavContainer className={close}>
-			<CloseIcon>
-				<AiOutlineClose
-					onClick={() => handleExit()}
-					color="#fff"
-					size={"2rem"}
-					style={{ cursor: "pointer" }}
-				/>
-			</CloseIcon>
-
+		<NavContainer>
 			<Img src="/images/logo.png" alt="logo" />
 			<Details>
 				<WalletContainer>

@@ -4,21 +4,12 @@ import styled from "styled-components";
 import { AiOutlineEye, AiOutlineClose } from "react-icons/ai";
 
 const CloseBtn = () => {
-	const { setClose, close } = useContext(AppContext);
-	console.log(setClose);
-
-	const handleClose = () => {
-		setClose("close");
-	};
 	return (
-		<CloseIcon>
-			<AiOutlineClose
-				onClick={() => handleClose()}
-				color="#fff"
-				size={"2rem"}
-				style={{ cursor: "pointer", zIndex: "20" }}
-			/>
-		</CloseIcon>
+		<AiOutlineClose
+			color="#000"
+			size={"2rem"}
+			style={{ cursor: "pointer", zIndex: "20" }}
+		/>
 	);
 };
 
