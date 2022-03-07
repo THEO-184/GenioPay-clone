@@ -71,8 +71,6 @@ const CloseBtn = styled.div`
 `;
 
 const SearchContainer = styled.div`
-	width: 0 !important;
-	display: none;
 	@media ${device.mobileL} {
 		display: none;
 	}

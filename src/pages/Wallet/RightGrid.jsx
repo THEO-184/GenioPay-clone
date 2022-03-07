@@ -230,6 +230,10 @@ const PaymentOptions = styled(LightGreenBtn)`
 	background: none;
 	color: #017189;
 
+	@media ${device.tablet} {
+		flex-basis: 25%;
+	}
+
 	h6 {
 		font-size: 16px;
 	}

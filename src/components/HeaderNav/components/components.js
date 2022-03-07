@@ -54,6 +54,7 @@ export const HeaderNavContainer = styled.div`
 		}
 	}
 	@media ${device.mobileL} {
+		justify-content: space-around;
 		.flex-container {
 			display: flex;
 			align-items: center;
