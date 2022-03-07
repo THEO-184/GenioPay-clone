@@ -216,6 +216,7 @@ const PaymentOptionsContainer = styled.div`
 	align-items: center;
 	width: 90%;
 	margin: auto;
+	flex-wrap: wrap;
 
 	@media ${device.tablet} {
 		width: 80vw;

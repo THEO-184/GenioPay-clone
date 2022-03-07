@@ -24,7 +24,9 @@ const HeaderNav = () => {
 		<HeaderNavContainer>
 			<h3>{title}</h3>
 			<div className="flex-container">
-				<SearchBar size={25} />
+				<SearchContainer>
+					<SearchBar size={25} />
+				</SearchContainer>
 				<img src="/images/tree.png" alt="tree" className="tree" />
 				<span>0 planted</span>
 				<img
@@ -65,6 +67,14 @@ const CloseBtn = styled.div`
 
 	@media ${device.tablet} {
 		display: block;
+	}
+`;
+
+const SearchContainer = styled.div`
+	width: 0 !important;
+	display: none;
+	@media ${device.mobileL} {
+		display: none;
 	}
 `;
 
