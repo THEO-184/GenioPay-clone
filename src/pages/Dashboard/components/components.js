@@ -7,6 +7,7 @@ export const Container = styled.main`
 	left: 25%;
 	top: 93px;
 	overflow-x: hidden;
+	padding-bottom: 2rem !important;
 	/* background: #fcfdfe; */
 
 	@media ${device.tablet} {
@@ -62,11 +63,10 @@ export const Header = styled.div`
 
 export const ContentContainer = styled.section`
 	background: #fff;
-	/* width: 90%; */
+	width: 90%;
 	margin-left: 0;
-	/* height: auto; */
 	border-radius: 16px;
-	padding: 0 1.2rem;
+	padding: 0 1.2rem 1.2rem 1.2rem;
 	padding-right: 2rem;
 	font-style: normal;
 
@@ -109,10 +109,9 @@ export const WalletContent = styled.h5`
 
 export const TransactionsContainer = styled.div`
 	margin: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	display: flex;
 	justify-content: flex-end;
-	flex-wrap: wrap;
 	max-width: 100%;
 	align-items: center;
 
@@ -159,6 +158,7 @@ export const TransactionsContainer = styled.div`
 
 	@media ${device.tablet} {
 		justify-content: flex-start;
+		flex-wrap: wrap;
 
 		.transaction {
 			margin-left: 0rem;
