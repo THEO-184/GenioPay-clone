@@ -8,7 +8,7 @@ import Wallet from "./pages/Wallet/Wallet";
 export const AppContext = createContext(null);
 function App() {
 	const [title, setTitle] = useState("Dashboard");
-	const [close, setClose] = useState("open");
+	const [close, setClose] = useState(true);
 	console.log(close);
 
 	return (
@@ -16,7 +16,8 @@ function App() {
 			className="App"
 			value={{ setTitle, title, setClose, close }}
 		>
-			<Navbar />
+			{close && <Navbar />}
+
 			<HeaderNav />
 			{title === "Dashboard" ? (
 				<Dashboard />

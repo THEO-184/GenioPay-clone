@@ -5,13 +5,20 @@ import {
 	Menu,
 	NavContainer,
 } from "./components/components";
+import styled from "styled-components";
 import { BiChevronDown, BiMenu } from "react-icons/bi";
+import { CloseIcon } from "../Navbar/NavComponents/components";
+import { AiOutlineEye, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+
 import { AppContext } from "../../App";
 
 import SearchBar from "./Searchbar";
 
 const HeaderNav = () => {
-	const { title } = useContext(AppContext);
+	const { title, setClose, close } = useContext(AppContext);
+	const handleClose = () => {
+		setClose(!close);
+	};
 
 	return (
 		<HeaderNavContainer>
@@ -34,8 +41,26 @@ const HeaderNav = () => {
 					<BiChevronDown />
 				</UserProfile>
 			</div>
+
+			<CloseBtn>
+				<AiOutlineMenu
+					onClick={() => handleClose()}
+					color="#000"
+					size={"2rem"}
+					style={{ cursor: "pointer", zIndex: "20" }}
+				/>
+			</CloseBtn>
 		</HeaderNavContainer>
 	);
 };
+
+const CloseBtn = styled.div`
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	top: 25px;
+	right: 20px;
+	z-index: 10000;
+`;
 
 export default HeaderNav;
