@@ -11,11 +11,7 @@ const Search = styled("div")((props) => ({
 		backgroundColor: "#F8FCFC",
 	},
 	marginLeft: 0,
-	width: `${props.size}px`,
-	// [theme.breakpoints.up("sm")]: {
-	// 	marginLeft: theme.spacing(1),
-	// 	width: `${props.size}px`,
-	// },
+	width: `${props.size}vw`,
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({

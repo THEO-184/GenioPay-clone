@@ -11,10 +11,14 @@ const HeaderNav = () => {
 		<HeaderNavContainer>
 			<h3>{title}</h3>
 			<div className="flex-container">
-				<SearchBar size={304} />
-				<img src="/images/tree.png" alt="tree" />
+				<SearchBar size={25} />
+				<img src="/images/tree.png" alt="tree" className="tree" />
 				<span>0 planted</span>
-				<img src="/images/notification.png" alt="notification" />
+				<img
+					src="/images/notification.png"
+					alt="notification"
+					className="bell"
+				/>
 				<UserProfile>
 					<img src="/images/User.png" alt="User" />
 					<div className="verified">

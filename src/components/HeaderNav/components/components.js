@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../../mediaQuery/mediaQuery";
 
 export const HeaderNavContainer = styled.div`
 	position: absolute;
@@ -29,6 +30,31 @@ export const HeaderNavContainer = styled.div`
 		font-size: 28px;
 		line-height: 100%;
 		color: #001b21;
+	}
+
+	@media ${device.laptop} {
+		h3 {
+			font-size: 20px;
+		}
+	}
+	@media ${device.tablet} {
+		width: 95.7vw;
+		left: 0;
+	}
+	@media ${device.mobileL} {
+		.flex-container {
+			display: flex;
+			align-items: center;
+
+			span {
+				display: none;
+			}
+
+			.bell,
+			.tree {
+				display: none;
+			}
+		}
 	}
 `;
 
@@ -72,5 +98,19 @@ export const UserProfile = styled.div`
 		line-height: 150%;
 		color: #2b4146;
 		margin: 0;
+	}
+
+	@media ${device.mobileL} {
+		& > img {
+			display: block;
+		}
+
+		p {
+			display: block;
+		}
+
+		h6 {
+			display: none;
+		}
 	}
 `;

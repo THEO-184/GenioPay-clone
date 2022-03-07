@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import device from "../../../mediaQuery/mediaQuery";
+
 export const Container = styled.main`
 	position: absolute;
 	width: 73vw;
 	left: 23.5vw;
 	top: 93px;
 	background: #fcfdfe;
+
+	@media ${device.tablet} {
+		width: 100vw;
+		left: 0;
+	}
 `;
 
 export const Header = styled.div`
@@ -30,13 +37,11 @@ export const Header = styled.div`
 
 	h6 {
 		font-size: 16px;
-		line-height: 150%;
 		color: #017189;
 	}
 
 	& > h5 {
 		font-size: 21px;
-		line-height: 150%;
 	}
 `;
 
@@ -44,7 +49,8 @@ export const ContentContainer = styled.section`
 	background: #fff;
 	width: 90%;
 	margin: 1rem auto;
-	height: 1065px;
+	margin-left: 0;
+	height: auto;
 	border-radius: 16px;
 	padding: 0 1.2rem;
 	padding-right: 2rem;
@@ -128,6 +134,36 @@ export const TransactionsContainer = styled.div`
 				font-weight: bold;
 				/* font-size: 16px; */
 				color: #001b21;
+			}
+		}
+	}
+
+	@media ${device.tablet} {
+		justify-content: flex-start;
+
+		.transaction {
+			margin-left: 1rem;
+
+			.img-container {
+				padding-left: 0;
+			}
+		}
+
+		& > div:first-child {
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+
+	@media ${device.mobileL} {
+		.transaction {
+			& > div:last-child {
+				p {
+					font-size: 12px;
+				}
+				h6 {
+					font-size: 12px;
+				}
 			}
 		}
 	}

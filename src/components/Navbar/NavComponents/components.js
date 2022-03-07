@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../../mediaQuery/mediaQuery";
 
 export const NavContainer = styled.div`
 	display: flex;
@@ -11,11 +12,15 @@ export const NavContainer = styled.div`
 	top: 0px;
 	height: 2727px;
 	background: #017189;
+
+	@media ${device.tablet} {
+		display: none;
+	}
 `;
 
 export const Img = styled.img`
 	height: 42px;
-	width: 188px;
+	width: 15vw;
 	left: 64px;
 	top: 32px;
 	border-radius: 0px;
@@ -26,11 +31,16 @@ export const Img = styled.img`
 `;
 
 export const Details = styled.div`
-	width: 246px;
-	height: 202px;
+	width: 17vw;
+	/* height: 202px; */
+	height: auto;
 	background: #2b899d;
 	border-radius: 8px;
 	padding: 1rem 1.5rem;
+
+	@media ${device.laptop} {
+		padding: 0.7rem 1rem;
+	}
 
 	hr {
 		width: 100%;
@@ -55,7 +65,7 @@ export const Dashboard = styled(Details)`
 `;
 
 export const NavMenu = styled.div`
-	width: 246px;
+	width: 17vw;
 	padding: 1rem 1.5rem;
 	display: flex;
 	color: #fff;
@@ -142,6 +152,24 @@ export const WalletContainer = styled.div`
 		width: 16px;
 		height: 16px;
 	}
+
+	@media ${device.laptop} {
+		& > div:first-child {
+			font-size: 14px;
+
+			p {
+				line-height: 15px;
+
+				margin: 0px 0px;
+			}
+
+			h6 {
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
 `;
 
 export const ButtonContainer = styled.div`
@@ -170,8 +198,8 @@ export const Refer = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 24px 16px 24px 21px;
-	width: 246px;
-	height: 186px;
+	width: 17vw;
+	height: auto;
 	background: #fff5e9;
 	border-radius: 8px;
 
@@ -190,7 +218,6 @@ export const Refer = styled.div`
 			height: 24px;
 			font-weight: bold;
 			font-size: 16px;
-			line-height: 150%;
 			margin: 0px;
 		}
 		p {
@@ -198,6 +225,21 @@ export const Refer = styled.div`
 			line-height: 150%;
 			color: #2b4146;
 			margin: 0;
+		}
+	}
+
+	@media ${device.laptop} {
+		padding: 15px 10px 15px 15px;
+
+		& > div {
+			h6 {
+				font-size: 14px;
+				/* margin-bottom: 15px; */
+			}
+
+			p {
+				font-size: 13px;
+			}
 		}
 	}
 `;
