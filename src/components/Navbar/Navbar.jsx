@@ -24,7 +24,6 @@ const Navbar = () => {
 	const navData = getNavContent();
 	const [navId, setNavId] = useState(1);
 	const [widthVal, setWidthVal] = useState(width);
-	console.log(width);
 
 	const handleChangeNavLink = (id, word) => {
 		setNavId(id);
