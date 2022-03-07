@@ -3,9 +3,9 @@ import device from "../../../mediaQuery/mediaQuery";
 
 export const HeaderNavContainer = styled.div`
 	position: absolute;
-	width: 69.99vw;
+	width: 70%;
 	height: 93px;
-	left: 23.5vw;
+	left: 25%;
 	top: 0px;
 	background: #fcfdfe;
 	display: flex;
@@ -15,7 +15,6 @@ export const HeaderNavContainer = styled.div`
 	.flex-container {
 		display: flex;
 		align-items: center;
-
 		img,
 		span {
 			display: block;
@@ -38,13 +37,28 @@ export const HeaderNavContainer = styled.div`
 		}
 	}
 	@media ${device.tablet} {
+		justify-content: center;
 		width: 95.7vw;
 		left: 0;
+
+		h3 {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+
+		.flex-container {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-right: 20px;
+		}
 	}
 	@media ${device.mobileL} {
 		.flex-container {
 			display: flex;
 			align-items: center;
+			justify-content: flex-start;
+			padding-right: 20px;
 
 			span {
 				display: none;
@@ -66,7 +80,7 @@ export const UserProfile = styled.div`
 	width: 178px;
 	border-radius: 16px;
 	height: 56px;
-	background: #fff;
+	/* background: #fff; */
 
 	.verified {
 		padding-right: 5px;
@@ -98,6 +112,11 @@ export const UserProfile = styled.div`
 		line-height: 150%;
 		color: #2b4146;
 		margin: 0;
+	}
+
+	@media ${device.tablet} {
+		justify-content: flex-start;
+		background: transparent;
 	}
 
 	@media ${device.mobileL} {

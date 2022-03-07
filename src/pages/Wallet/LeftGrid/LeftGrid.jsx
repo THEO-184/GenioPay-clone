@@ -26,7 +26,7 @@ const LeftGrid = () => {
 						justifyContent: "space-between",
 					}}
 				>
-					<SearchBar size={200} />
+					<SearchBar size={15} />
 					<Header>
 						<h6 style={{ marginLeft: "15px" }}>
 							All

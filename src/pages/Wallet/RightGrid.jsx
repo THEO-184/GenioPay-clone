@@ -15,6 +15,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 import { Header } from "../Dashboard/components/components";
 import { LightGreenBtn } from "../../components/Navbar/NavComponents/components";
+import device from "../../mediaQuery/mediaQuery";
 
 const RightGrid = () => {
 	const expensesDetails = getExpensesDetails();
@@ -29,7 +30,7 @@ const RightGrid = () => {
 
 	return (
 		<Grid item xs={12} md={8}>
-			<Paper sx={{ p: 1, maxWidth: "100%" }}>
+			<Paper sx={{ p: 1 }}>
 				<DefaultWallet>
 					<WalletDetails>
 						<div>
@@ -122,11 +123,15 @@ const RightGrid = () => {
 };
 
 const DefaultWallet = styled.div`
-	width: 509px;
+	width: 90%;
 	margin: auto;
 	border: 1px solid #f3f4f6;
 	box-sizing: border-box;
 	border-radius: 16px;
+
+	@media ${device.tablet} {
+		width: 80vw;
+	}
 
 	${WalletDetails} {
 		align-items: center;
@@ -161,6 +166,10 @@ const DefaultWallet = styled.div`
 			font-weight: 800;
 			font-size: 40px;
 			color: #001b21;
+
+			@media ${device.tablet} {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -171,8 +180,12 @@ const DefaultWallet = styled.div`
 		max-width: 100%;
 		flex-wrap: wrap;
 		margin-top: 1rem;
-		width: 509px;
+		width: 90%;
 		margin: 1rem auto;
+
+		@media ${device.tablet} {
+			width: 80vw;
+		}
 
 		& > div {
 			padding: 10px 0;
@@ -180,6 +193,10 @@ const DefaultWallet = styled.div`
 			& span {
 				padding-right: 10px;
 				font-size: 16px;
+
+				@media ${device.tablet} {
+					font-size: 12px;
+				}
 
 				color: #001b21;
 			}
@@ -197,8 +214,12 @@ const PaymentOptionsContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 509px;
+	width: 90%;
 	margin: auto;
+
+	@media ${device.tablet} {
+		width: 80vw;
+	}
 `;
 
 const PaymentOptions = styled(LightGreenBtn)`
@@ -223,8 +244,14 @@ const PaymentOptions = styled(LightGreenBtn)`
 `;
 
 const GridContent = styled.article`
-	width: 509px;
+	width: 90%;
 	margin: auto;
+
+	@media ${device.tablet} {
+		${Header} {
+			display: none;
+		}
+	}
 
 	${Header} {
 		justify-content: flex-end;

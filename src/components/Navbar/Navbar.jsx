@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
-import { AiOutlineEye } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineClose } from "react-icons/ai";
 import { AppContext } from "../../App";
+import { GrClose } from "react-icons/gr";
 import {
 	NavContainer,
 	Img,
@@ -13,6 +14,7 @@ import {
 	Button,
 	Refer,
 	LightGreenBtn,
+	CloseIcon,
 } from "./NavComponents/components";
 import getNavContent from "../../headerData";
 
@@ -20,6 +22,11 @@ const Navbar = () => {
 	const { setTitle } = useContext(AppContext);
 	const navData = getNavContent();
 	const [navId, setNavId] = useState(1);
+	const [close, setClose] = useState("");
+
+	const handleExit = () => {
+		setClose("close");
+	};
 
 	const handleChangeNavLink = (id, word) => {
 		setNavId(id);
@@ -27,7 +34,16 @@ const Navbar = () => {
 	};
 
 	return (
-		<NavContainer>
+		<NavContainer className={close}>
+			<CloseIcon>
+				<AiOutlineClose
+					onClick={() => handleExit()}
+					color="#fff"
+					size={"2rem"}
+					style={{ cursor: "pointer" }}
+				/>
+			</CloseIcon>
+
 			<Img src="/images/logo.png" alt="logo" />
 			<Details>
 				<WalletContainer>

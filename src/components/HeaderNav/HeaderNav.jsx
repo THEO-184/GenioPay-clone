@@ -1,12 +1,18 @@
 import React, { useContext } from "react";
-import { HeaderNavContainer, UserProfile } from "./components/components";
-import { BiChevronDown } from "react-icons/bi";
+import {
+	HeaderNavContainer,
+	UserProfile,
+	Menu,
+	NavContainer,
+} from "./components/components";
+import { BiChevronDown, BiMenu } from "react-icons/bi";
 import { AppContext } from "../../App";
 
 import SearchBar from "./Searchbar";
 
 const HeaderNav = () => {
-	const { title, setTitle } = useContext(AppContext);
+	const { title } = useContext(AppContext);
+
 	return (
 		<HeaderNavContainer>
 			<h3>{title}</h3>

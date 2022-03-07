@@ -32,19 +32,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
 		transition: theme.transitions.create("width"),
 		width: "100%",
-		[theme.breakpoints.up("sm")]: {
-			width: "12ch",
-			"&:focus": {
-				width: "20ch",
-			},
+
+		[theme.breakpoints.down("sm")]: {
+			width: "18ch",
+			// "&:focus": {
+			// 	width: "20ch",
+			// },
 		},
 	},
 }));
 
-const SearchBar = ({ size }) => {
+const SearchBar = () => {
 	return (
 		<div>
-			<Search size={size}>
+			<Search>
 				<SearchIconWrapper>
 					<FiSearch />
 				</SearchIconWrapper>

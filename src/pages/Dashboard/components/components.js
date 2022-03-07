@@ -3,10 +3,10 @@ import device from "../../../mediaQuery/mediaQuery";
 
 export const Container = styled.main`
 	position: absolute;
-	width: 73vw;
-	left: 23.5vw;
+	width: 70%;
+	left: 25%;
 	top: 93px;
-	background: #fcfdfe;
+	/* background: #fcfdfe; */
 
 	@media ${device.tablet} {
 		width: 100vw;
@@ -43,14 +43,27 @@ export const Header = styled.div`
 	& > h5 {
 		font-size: 21px;
 	}
+
+	@media ${device.tablet} {
+		.create-wallet {
+			width: 170px;
+			font-size: 13px;
+		}
+
+		h6 {
+			font-size: 13px;
+		}
+		& > h5 {
+			font-size: 16px;
+		}
+	}
 `;
 
 export const ContentContainer = styled.section`
 	background: #fff;
-	width: 90%;
-	margin: 1rem auto;
+	/* width: 90%; */
 	margin-left: 0;
-	height: auto;
+	/* height: auto; */
 	border-radius: 16px;
 	padding: 0 1.2rem;
 	padding-right: 2rem;
@@ -97,6 +110,7 @@ export const TransactionsContainer = styled.div`
 	margin: 0;
 	display: flex;
 	justify-content: flex-end;
+	max-width: 100%;
 	align-items: center;
 
 	.transaction {
@@ -139,10 +153,10 @@ export const TransactionsContainer = styled.div`
 	}
 
 	@media ${device.tablet} {
-		justify-content: flex-start;
+		justify-content: space-evenly;
 
 		.transaction {
-			margin-left: 1rem;
+			margin-left: 0rem;
 
 			.img-container {
 				padding-left: 0;

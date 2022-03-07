@@ -7,27 +7,50 @@ export const NavContainer = styled.div`
 	align-items: center;
 	padding: 1rem 1.5rem;
 	position: absolute;
-	width: 20vw;
+	width: 20%;
 	left: -1px;
 	top: 0px;
 	height: 2727px;
 	background: #017189;
 
 	@media ${device.tablet} {
+		width: 50vw;
+		z-index: 10;
+		justify-content: flex-start;
+		align-items: flex-start;
+		left: 0;
 		display: none;
 	}
+
+	@media ${device.mobileL} {
+		width: 100vw;
+		align-items: center;
+	}
+`;
+
+export const CloseIcon = styled.div`
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	display: none;
 `;
 
 export const Img = styled.img`
 	height: 42px;
 	width: 15vw;
-	left: 64px;
-	top: 32px;
+
 	border-radius: 0px;
-	flex: none;
-	order: 0;
-	flex-grow: 0;
 	margin: 1.5rem 0px;
+
+	@media ${device.tablet} {
+		width: 25vw;
+	}
+	@media ${device.mobileL} {
+		width: 40vw;
+		left: 20px;
+	}
 `;
 
 export const Details = styled.div`
@@ -38,8 +61,15 @@ export const Details = styled.div`
 	border-radius: 8px;
 	padding: 1rem 1.5rem;
 
-	@media ${device.laptop} {
+	/* @media ${device.laptop} {
 		padding: 0.7rem 1rem;
+	} */
+
+	@media ${device.tablet} {
+		width: 25vw;
+	}
+	@media ${device.mobileL} {
+		width: 50vw;
 	}
 
 	hr {
@@ -73,6 +103,13 @@ export const NavMenu = styled.div`
 
 	img {
 		display: inline-block;
+	}
+
+	@media ${device.tablet} {
+		width: 25vw;
+	}
+	@media ${device.mobileL} {
+		width: 50vw;
 	}
 `;
 
@@ -229,7 +266,7 @@ export const Refer = styled.div`
 	}
 
 	@media ${device.laptop} {
-		padding: 15px 10px 15px 15px;
+		/* padding: 15px 10px 15px 15px; */
 
 		& > div {
 			h6 {
@@ -241,6 +278,14 @@ export const Refer = styled.div`
 				font-size: 13px;
 			}
 		}
+	}
+
+	@media ${device.tablet} {
+		width: 25vw;
+	}
+
+	@media ${device.mobileL} {
+		width: 50vw;
 	}
 `;
 
