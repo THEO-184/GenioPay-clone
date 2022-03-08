@@ -114,6 +114,7 @@ export const TransactionsContainer = styled.div`
 	justify-content: flex-end;
 	max-width: 100%;
 	align-items: center;
+	width: 100%;
 
 	.transaction {
 		display: flex;
@@ -121,7 +122,6 @@ export const TransactionsContainer = styled.div`
 		justify-content: center;
 		flex-wrap: wrap;
 		margin-left: 3rem;
-		flex-basis: 33%;
 
 		.img-container {
 			display: flex;
@@ -179,6 +179,7 @@ export const TransactionsContainer = styled.div`
 
 	@media ${device.mobileL} {
 		.transaction {
+			flex-basis: 50%;
 			& > div:last-child {
 				p {
 					font-size: 12px;
