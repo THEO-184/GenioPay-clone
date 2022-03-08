@@ -214,7 +214,7 @@ const PaymentOptionsContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 90%;
+	max-width: 90%;
 	margin: auto;
 	flex-wrap: wrap;
 

@@ -23,15 +23,30 @@ const Navbar = () => {
 	const { setTitle, setClose } = useContext(AppContext);
 	const navData = getNavContent();
 	const [navId, setNavId] = useState(0);
+	const [pageName, setPageName] = useState("");
 	const [widthVal, setWidthVal] = useState(width);
 
 	const handleChangeNavLink = (id, word) => {
 		setNavId(id);
+		setPageName(word);
+		localStorage.setItem("navLink", JSON.stringify(id));
 		setTitle(word);
+		setPageName(word);
+		localStorage.setItem("openedPage", JSON.stringify(word));
 		if (widthVal < 922) {
 			setClose(false);
 		}
 	};
+
+	useEffect(() => {
+		const navLink = localStorage.getItem("navLink");
+		const savedNavLink = navLink ? JSON.parse(navLink) : 0;
+		setNavId(parseInt(savedNavLink));
+
+		const page = localStorage.getItem("openedPage");
+		const openPage = page ? JSON.parse(page) : "Dashboard";
+		setTitle(openPage);
+	}, [navId, pageName]);
 
 	return (
 		<NavContainer>

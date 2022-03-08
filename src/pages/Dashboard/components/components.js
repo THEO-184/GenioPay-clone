@@ -120,7 +120,7 @@ export const TransactionsContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		margin-left: 3rem;
 
 		.img-container {
@@ -157,8 +157,9 @@ export const TransactionsContainer = styled.div`
 	}
 
 	@media ${device.tablet} {
-		justify-content: flex-start;
+		justify-content: space-between;
 		flex-wrap: wrap;
+		flex-basis: 30%;
 
 		.transaction {
 			margin-left: 0rem;
@@ -178,6 +179,8 @@ export const TransactionsContainer = styled.div`
 	}
 
 	@media ${device.mobileL} {
+		justify-content: flex-start;
+
 		.transaction {
 			flex-basis: 50%;
 			& > div:last-child {
