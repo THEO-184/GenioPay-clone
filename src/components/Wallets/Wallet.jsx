@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Paper, Grid, Box, Typography } from "@mui/material";
+import { Paper, Grid, Box, Typography, Avatar } from "@mui/material";
 import { styled as MatStyled } from "@mui/material/styles";
 
 const Item = MatStyled(Paper)(({ theme }) => ({
@@ -10,7 +10,7 @@ const Item = MatStyled(Paper)(({ theme }) => ({
 }));
 
 const Wallet = ({ walletInfo }) => {
-	const { account_name, currency, price, backCol } = walletInfo;
+	const { account_name, currency, price, backCol, path } = walletInfo;
 	return (
 		<Grid item xs={12} md={6} lg={4} sx={{ height: "auto", p: 1.5 }}>
 			<Item elevation={0} sx={{ height: "140px", p: 1.5, background: backCol }}>
@@ -37,7 +37,7 @@ const Wallet = ({ walletInfo }) => {
 							</Typography>
 							<Typography variant="body1">{currency}</Typography>
 						</div>
-						<img src="/images/flag.png" alt="flag" />
+						<Avatar src={path} alt="flag" />
 					</Box>
 					<Typography variant="h6" sx={{ fontWeight: "bold" }}>
 						{price}
