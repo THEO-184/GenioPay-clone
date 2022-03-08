@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Tabs = styled.div`
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
+	max-width: 100%;
 	margin-bottom: 1rem;
 `;
 
