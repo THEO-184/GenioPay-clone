@@ -62,7 +62,6 @@ const Dashboard = () => {
 									height: "100%",
 									cursor: "pointer",
 									my: 1,
-									// mx: 0.5,
 								}}
 							>
 								<BoxIcon backCol={links.backColor}>

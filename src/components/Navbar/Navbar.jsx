@@ -22,7 +22,7 @@ const Navbar = () => {
 	const { width } = useWindowDimensions();
 	const { setTitle, setClose } = useContext(AppContext);
 	const navData = getNavContent();
-	const [navId, setNavId] = useState(1);
+	const [navId, setNavId] = useState(0);
 	const [widthVal, setWidthVal] = useState(width);
 
 	const handleChangeNavLink = (id, word) => {
