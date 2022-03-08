@@ -7,7 +7,7 @@ export const NavContainer = styled.div`
 	align-items: center;
 	padding: 1rem 1.5rem;
 	position: absolute;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	width: 20%;
 	left: -1px;
 	top: 0px;

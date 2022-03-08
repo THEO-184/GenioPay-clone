@@ -53,7 +53,7 @@ const Dashboard = () => {
 								key={links.id}
 								elevation={1}
 								sx={{
-									width: { xs: "80vw", sm: "255px", lg: "115px" },
+									width: { xs: "80vw", sm: "300px", lg: "13%" },
 									height: "131px",
 									display: "flex",
 									justifyContent: "space-around",
@@ -62,7 +62,7 @@ const Dashboard = () => {
 									height: "100%",
 									cursor: "pointer",
 									my: 1,
-									mx: { xs: 2 },
+									// mx: 0.5,
 								}}
 							>
 								<BoxIcon backCol={links.backColor}>
