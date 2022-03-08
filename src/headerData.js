@@ -37,6 +37,7 @@ const walletInfo = [
 		account_name: "Personal account",
 		currency: "USD",
 		price: "$10,250.00",
+		path: "https://e7.pngegg.com/pngimages/666/76/png-clipart-flag-of-the-united-states-national-flag-usa-flag-flag-logo.png",
 		backCol: "#FFF6E6",
 	},
 	{
@@ -44,6 +45,7 @@ const walletInfo = [
 		account_name: "EUR account",
 		currency: "EUR",
 		price: "$4000.00",
+		path: "https://upload.wikimedia.org/wikipedia/commons/6/62/Flag_of_France.png",
 		backCol: "#FBF1F0",
 	},
 	{
@@ -52,6 +54,7 @@ const walletInfo = [
 		currency: "GBP",
 		price: "$50.000",
 		backCol: "#DDECEF",
+		path: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_the_United_Kingdom.png/1200px-Flag_of_the_United_Kingdom.png",
 	},
 ];
 

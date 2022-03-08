@@ -76,10 +76,6 @@ export const Details = styled.div`
 	border-radius: 8px;
 	padding: 1rem 1.5rem;
 
-	/* @media ${device.laptop} {
-		padding: 0.7rem 1rem;
-	} */
-
 	@media ${device.tablet} {
 		width: 25vw;
 	}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tabs, TabBtn, WalletDetails } from "./components";
-import { Grid, Paper, Box } from "@mui/material";
+import { Grid, Paper, Box, Avatar } from "@mui/material";
 import { BiChevronDown } from "react-icons/bi";
 import SearchBar from "../../../components/HeaderNav/Searchbar";
 import { Header } from "../../Dashboard/components/components";
@@ -53,8 +53,8 @@ const LeftGrid = () => {
 					return (
 						<WalletDetails key={wallet.id} active={wallet.id === activeContent}>
 							<div>
-								<img
-									src="/images/flag.png"
+								<Avatar
+									src={wallet.path}
 									alt="flag"
 									style={{
 										width: "30px",
