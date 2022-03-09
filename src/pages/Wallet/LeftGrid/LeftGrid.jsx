@@ -11,6 +11,7 @@ const LeftGrid = () => {
 	const tabContents = getTabContents();
 	const [tabId, setTabId] = useState(1);
 	const [activeContent, setActiveContent] = useState(1);
+
 	const handleClick = (id) => {
 		setTabId(id);
 	};
