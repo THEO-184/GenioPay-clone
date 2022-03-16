@@ -6,7 +6,8 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Wallet from './pages/Wallet/Wallet'
 console.clear()
 
-export const AppContext = createContext(null)
+export const AppContext = createContext({})
+
 function App() {
     const [title, setTitle] = useState('Dashboard')
     const [close, setClose] = useState(true)
